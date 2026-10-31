@@ -1,0 +1,22 @@
+{
+  "samples": 1,
+  "horizons_weeks": [
+    1,
+    2,
+    4
+  ],
+  "mae": [
+    0.2948956787586212,
+    0.15453289449214935,
+    0.13364991545677185
+  ],
+  "rmse": [
+    0.2949080169200897,
+    0.15455645322799683,
+    0.13374371826648712
+  ],
+  "checkpoint": "last.pt",
+  "split": "val",
+  "data": "temporal.jsonl",
+  "status": "Measured on supplied data only; NOT reproduced CR-Mix++ paper results"
+}

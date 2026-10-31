@@ -1,0 +1,46 @@
+experiment: spectral_yolov13_paper_reconstruction
+seed: 42
+classes: [Healthy, Sub-healthy, Bleached, Dead]
+model:
+  scale: l
+  neck_width: 256
+  pyramid_levels: 5
+  embedding_dim: 128
+  prototype_momentum: 0.1
+  wio: true
+  cp_head: true
+  bio_mamba: true
+loss:
+  localization: 1.0
+  classification: 0.3
+  contrastive: 0.7
+  temperature: 0.1
+  forecast: 0.5
+  dfl: 0.0
+  background_weight: 0.1
+  max_contrastive_samples: 512
+temporal:
+  hidden_dim: 256
+  state_dim: 16
+  layers: 2
+  grid: 8
+  horizons_weeks: [1, 2, 4]
+  dropout: 0.1
+  backend: reference
+  detach_backbone: true
+  smoothness_weight: 0.01
+  curriculum_fractions: [0.333333, 0.666667]
+train:
+  image_size: 640
+  epochs: 300
+  batch_size: 16
+  temporal_batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  warmup_epochs: 5
+  grad_clip: 1.0
+  workers: 0
+  spectral_augmentation: true
+  mosaic: 1.0
+  close_mosaic: 10
+  amp: true

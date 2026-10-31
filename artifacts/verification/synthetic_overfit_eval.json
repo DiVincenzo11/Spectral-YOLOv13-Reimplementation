@@ -1,0 +1,36 @@
+{
+  "images": 4,
+  "map50": 1.0,
+  "map50_95": 0.85,
+  "per_class": [
+    {
+      "class": "Healthy",
+      "ground_truth": 1,
+      "ap50": 1.0,
+      "ap50_95": 0.9
+    },
+    {
+      "class": "Sub-healthy",
+      "ground_truth": 1,
+      "ap50": 1.0,
+      "ap50_95": 0.7
+    },
+    {
+      "class": "Bleached",
+      "ground_truth": 1,
+      "ap50": 1.0,
+      "ap50_95": 0.9
+    },
+    {
+      "class": "Dead",
+      "ground_truth": 1,
+      "ap50": 1.0,
+      "ap50_95": 0.9
+    }
+  ],
+  "ap_protocol": "101-point precision envelope; classes without GT excluded",
+  "checkpoint": "last.pt",
+  "split": "val",
+  "data": "data.yaml",
+  "status": "Measured on supplied data only; NOT reproduced CR-Mix++ paper results"
+}

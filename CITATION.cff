@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: Please cite the original paper and describe this repository as a paper-based reimplementation.
+title: Spectral-YOLOv13 paper-based reimplementation
+type: software
+version: 0.1.0
+date-released: 2026-10-31
+repository-code: https://github.com/DiVincenzo11/Spectral-YOLOv13-Reimplementation
+license: AGPL-3.0
+preferred-citation:
+  type: article
+  title: "Spectral-YOLOv13: A Dual-Domain Vision-Mamba Sensing Framework for Fine-Grained Coral Health Assessment and Continuous Ecological Forecasting"
+  authors:
+    - family-names: Yang
+      given-names: Litian
+    - family-names: Chen
+      given-names: Wenkun
+    - family-names: Mo
+      given-names: Zhuoyue
+    - family-names: Gao
+      given-names: Xin
+    - family-names: Mo
+      given-names: Minzhi
+    - family-names: Xia
+      given-names: Chunlei
+    - family-names: Zhang
+      given-names: Liankuan
+  journal: Sensors
+  year: 2026
+  volume: 26
+  issue: 10
+  start: 3265
+  doi: 10.3390/s26103265

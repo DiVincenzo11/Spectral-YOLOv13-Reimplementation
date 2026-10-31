@@ -1,0 +1,46 @@
+experiment: SYNTHETIC_PIPELINE_CHECK_NOT_CORAL_RESULTS
+seed: 42
+classes: [Healthy, Sub-healthy, Bleached, Dead]
+model:
+  scale: n
+  neck_width: 32
+  pyramid_levels: 3
+  embedding_dim: 16
+  prototype_momentum: 0.1
+  wio: true
+  cp_head: true
+  bio_mamba: true
+loss:
+  localization: 1.0
+  classification: 0.3
+  contrastive: 0.7
+  temperature: 0.1
+  forecast: 0.5
+  dfl: 0.0
+  background_weight: 0.1
+  max_contrastive_samples: 128
+temporal:
+  hidden_dim: 32
+  state_dim: 8
+  layers: 1
+  grid: 2
+  horizons_weeks: [1, 2, 4]
+  dropout: 0.1
+  backend: reference
+  detach_backbone: true
+  smoothness_weight: 0.01
+  curriculum_fractions: [0.333333, 0.666667]
+train:
+  image_size: 64
+  epochs: 2
+  batch_size: 2
+  temporal_batch_size: 1
+  learning_rate: 0.001
+  weight_decay: 0.0005
+  warmup_epochs: 0
+  grad_clip: 1.0
+  workers: 0
+  spectral_augmentation: true
+  mosaic: 0.0
+  close_mosaic: 0
+  amp: false

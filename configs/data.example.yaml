@@ -1,0 +1,6 @@
+# Relative paths resolve against this YAML file. Preserve class order.
+path: ../data/coral
+train: images/train
+val: images/val
+test: images/test
+names: [Healthy, Sub-healthy, Bleached, Dead]

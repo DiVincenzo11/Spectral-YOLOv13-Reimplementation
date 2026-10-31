@@ -1,0 +1,30 @@
+{
+  "status": "PASS: software checks only, no real coral data or paper metric reproduction",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "model_scale": "n",
+  "detection_loss": 6.2426958084106445,
+  "forecast_loss": 0.082560233771801,
+  "foreground_anchors": 40,
+  "prototype_seen": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "forecast_shape": [
+    1,
+    3,
+    1,
+    8,
+    8
+  ],
+  "selective_scan_672_shape": [
+    1,
+    672,
+    16
+  ],
+  "checkpoint_roundtrip": true,
+  "backbone_and_wavelet_gradients": true,
+  "forecast_detach_verified": true
+}

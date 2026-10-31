@@ -1,0 +1,55 @@
+classes:
+- Healthy
+- Sub-healthy
+- Bleached
+- Dead
+experiment: SYNTHETIC_OVERFIT_DIAGNOSTIC_NOT_PAPER
+loss:
+  background_weight: 0.1
+  classification: 0.3
+  contrastive: 0.7
+  dfl: 0.0
+  forecast: 0.5
+  localization: 1.0
+  max_contrastive_samples: 128
+  temperature: 0.1
+model:
+  bio_mamba: true
+  cp_head: true
+  embedding_dim: 16
+  neck_width: 32
+  prototype_momentum: 0.1
+  pyramid_levels: 3
+  scale: n
+  wio: true
+seed: 42
+temporal:
+  backend: reference
+  curriculum_fractions:
+  - 0.333333
+  - 0.666667
+  detach_backbone: true
+  dropout: 0.1
+  grid: 2
+  hidden_dim: 32
+  horizons_weeks:
+  - 1
+  - 2
+  - 4
+  layers: 1
+  smoothness_weight: 0.01
+  state_dim: 8
+train:
+  amp: false
+  batch_size: 2
+  close_mosaic: 0
+  epochs: 80
+  grad_clip: 1.0
+  image_size: 64
+  learning_rate: 0.001
+  mosaic: 0.0
+  spectral_augmentation: false
+  temporal_batch_size: 1
+  warmup_epochs: 0
+  weight_decay: 0.0005
+  workers: 0
